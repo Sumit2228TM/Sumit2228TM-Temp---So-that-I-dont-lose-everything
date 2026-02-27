@@ -82,96 +82,96 @@ function ProtectedRoute({ children }: { children: ReactNode }) {
     <BrowserRouter>
       <Routes>
         {/* ── Public auth routes ─────────────────────────────────────── */
-      /*  <Route
-          path="/signup"
-          element={
-            <PublicRoute>
-              <SignupPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <LoginPage />
-            </PublicRoute>
-          }
-        />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/*  <Route
+    path="/signup"
+    element={
+      <PublicRoute>
+        <SignupPage />
+      </PublicRoute>
+    }
+  />
+  <Route
+    path="/login"
+    element={
+      <PublicRoute>
+        <LoginPage />
+      </PublicRoute>
+    }
+  />
+  <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* ── Onboarding routes ──────────────────────────────────────── */
-    /*    <Route
-          path="/student/onboarding"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <StudentOnboardingPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/tutor/onboarding"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["tutor"]}>
-                <TutorOnboardingPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
+  {/* ── Onboarding routes ──────────────────────────────────────── */
+/*    <Route
+      path="/student/onboarding"
+      element={
+        <ProtectedRoute>
+          <RoleRoute allowedRoles={["student"]}>
+            <StudentOnboardingPage />
+          </RoleRoute>
+        </ProtectedRoute>
+      }
+    />
+    <Route
+      path="/tutor/onboarding"
+      element={
+        <ProtectedRoute>
+          <RoleRoute allowedRoles={["tutor"]}>
+            <TutorOnboardingPage />
+          </RoleRoute>
+        </ProtectedRoute>
+      }
+    />
 
-        {/* ── Dashboard placeholders (will be replaced next) ─────────── */
-      /*  <Route
-          path="/student/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <div className="p-8 text-morpheus-text font-display">
-                  Student Dashboard (coming soon)
-                </div>
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/tutor/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["tutor"]}>
-                <div className="p-8 text-morpheus-text font-display">
-                  Tutor Dashboard (coming soon)
-                </div>
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["admin"]}>
-                <div className="p-8 text-morpheus-text font-display">
-                  Admin Dashboard (coming soon)
-                </div>
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
+    {/* ── Dashboard placeholders (will be replaced next) ─────────── */
+/*  <Route
+    path="/student/dashboard"
+    element={
+      <ProtectedRoute>
+        <RoleRoute allowedRoles={["student"]}>
+          <div className="p-8 text-morpheus-text font-display">
+            Student Dashboard (coming soon)
+          </div>
+        </RoleRoute>
+      </ProtectedRoute>
+    }
+  />
+  <Route
+    path="/tutor/dashboard"
+    element={
+      <ProtectedRoute>
+        <RoleRoute allowedRoles={["tutor"]}>
+          <div className="p-8 text-morpheus-text font-display">
+            Tutor Dashboard (coming soon)
+          </div>
+        </RoleRoute>
+      </ProtectedRoute>
+    }
+  />
+  <Route
+    path="/admin/dashboard"
+    element={
+      <ProtectedRoute>
+        <RoleRoute allowedRoles={["admin"]}>
+          <div className="p-8 text-morpheus-text font-display">
+            Admin Dashboard (coming soon)
+          </div>
+        </RoleRoute>
+      </ProtectedRoute>
+    }
+  />
 
-       /* {/* ── Fallbacks ───────────────────────────────────────────────── */
-      /*  <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route
-          path="/unauthorized"
-          element={
-            <div className="p-8 text-red-400 font-display">Access Denied</div>
-          }
-        />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+ /* {/* ── Fallbacks ───────────────────────────────────────────────── */
+/*  <Route path="/" element={<Navigate to="/login" replace />} />
+  <Route
+    path="/unauthorized"
+    element={
+      <div className="p-8 text-red-400 font-display">Access Denied</div>
+    }
+  />
+  <Route path="*" element={<Navigate to="/login" replace />} />
+</Routes>
+</BrowserRouter>
+);
 /*}*/
 
 
@@ -239,97 +239,97 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         {/* ── Public auth routes ─────────────────────────────────────── */
-       /* <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/* <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
+ <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+ <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* ── Onboarding ─────────────────────────────────────────────── */
-     /*   <Route
-          path="/student/onboarding"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <StudentOnboardingPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/tutor/onboarding"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["tutor"]}>
-                <TutorOnboardingPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
+ {/* ── Onboarding ─────────────────────────────────────────────── */
+/*   <Route
+     path="/student/onboarding"
+     element={
+       <ProtectedRoute>
+         <RoleRoute allowedRoles={["student"]}>
+           <StudentOnboardingPage />
+         </RoleRoute>
+       </ProtectedRoute>
+     }
+   />
+   <Route
+     path="/tutor/onboarding"
+     element={
+       <ProtectedRoute>
+         <RoleRoute allowedRoles={["tutor"]}>
+           <TutorOnboardingPage />
+         </RoleRoute>
+       </ProtectedRoute>
+     }
+   />
 
-        {/* ── Student routes ─────────────────────────────────────────── */
-  /*      <Route
-          path="/student/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <StudentDashboardPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/student/discovery"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <DiscoveryPage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/student/tutors/:tutorId"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["student"]}>
-                <TutorProfilePage />
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
+   {/* ── Student routes ─────────────────────────────────────────── */
+/*      <Route
+        path="/student/dashboard"
+        element={
+          <ProtectedRoute>
+            <RoleRoute allowedRoles={["student"]}>
+              <StudentDashboardPage />
+            </RoleRoute>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/student/discovery"
+        element={
+          <ProtectedRoute>
+            <RoleRoute allowedRoles={["student"]}>
+              <DiscoveryPage />
+            </RoleRoute>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/student/tutors/:tutorId"
+        element={
+          <ProtectedRoute>
+            <RoleRoute allowedRoles={["student"]}>
+              <TutorProfilePage />
+            </RoleRoute>
+          </ProtectedRoute>
+        }
+      />
 
-        {/* ── Tutor + Admin placeholders ─────────────────────────────── */
-     /*   <Route
-          path="/tutor/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["tutor"]}>
-                <div className="p-8 text-morpheus-text font-display">
-                  Tutor Dashboard (coming soon)
-                </div>
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin/dashboard"
-          element={
-            <ProtectedRoute>
-              <RoleRoute allowedRoles={["admin"]}>
-                <div className="p-8 text-morpheus-text font-display">
-                  Admin Dashboard (coming soon)
-                </div>
-              </RoleRoute>
-            </ProtectedRoute>
-          }
-        />
+      {/* ── Tutor + Admin placeholders ─────────────────────────────── */
+/*   <Route
+     path="/tutor/dashboard"
+     element={
+       <ProtectedRoute>
+         <RoleRoute allowedRoles={["tutor"]}>
+           <div className="p-8 text-morpheus-text font-display">
+             Tutor Dashboard (coming soon)
+           </div>
+         </RoleRoute>
+       </ProtectedRoute>
+     }
+   />
+   <Route
+     path="/admin/dashboard"
+     element={
+       <ProtectedRoute>
+         <RoleRoute allowedRoles={["admin"]}>
+           <div className="p-8 text-morpheus-text font-display">
+             Admin Dashboard (coming soon)
+           </div>
+         </RoleRoute>
+       </ProtectedRoute>
+     }
+   />
 
-        {/* ── Fallbacks ───────────────────────────────────────────────── */
-    /*    <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+   {/* ── Fallbacks ───────────────────────────────────────────────── */
+/*    <Route path="/" element={<Navigate to="/login" replace />} />
+    <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
+    <Route path="*" element={<Navigate to="/login" replace />} />
+  </Routes>
+</BrowserRouter>
+);
 }*///
 
 
@@ -402,79 +402,79 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         {/* ── Public auth routes ─────────────────────────────────────── */
-     /*   <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/*   <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
+   <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+   <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* ── Onboarding ─────────────────────────────────────────────── */
-  /*      <Route path="/student/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
+   {/* ── Onboarding ─────────────────────────────────────────────── */
+/*      <Route path="/student/onboarding" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/tutor/onboarding" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
+      } />
 
-        {/* ── Student routes ─────────────────────────────────────────── */
- /*       <Route path="/student/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/discovery" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/tutors/:tutorId" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
-        } />
+      {/* ── Student routes ─────────────────────────────────────────── */
+/*       <Route path="/student/dashboard" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/student/discovery" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/student/tutors/:tutorId" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
+       } />
 
-        {/* ── Tutor routes ───────────────────────────────────────────── */
-  /*      <Route path="/tutor/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/requests" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/students" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
-        } />
+       {/* ── Tutor routes ───────────────────────────────────────────── */
+/*      <Route path="/tutor/dashboard" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/tutor/requests" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/tutor/students" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
+      } />
 
-        {/* ── Placeholder routes ─────────────────────────────────────── */
-  /*      <Route path="/student/connections" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
-            <div className="p-8 text-morpheus-text font-display">Connections (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
-            <div className="p-8 text-morpheus-text font-display">Chat (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
-            <div className="p-8 text-morpheus-text font-display">Sessions (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}>
-            <div className="p-8 text-morpheus-text font-display">Chat (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}>
-            <div className="p-8 text-morpheus-text font-display">Sessions (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/admin/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}>
-            <div className="p-8 text-morpheus-text font-display">Admin Dashboard (coming soon)</div>
-          </RoleRoute></ProtectedRoute>
-        } />
+      {/* ── Placeholder routes ─────────────────────────────────────── */
+/*      <Route path="/student/connections" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
+          <div className="p-8 text-morpheus-text font-display">Connections (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/student/chat" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
+          <div className="p-8 text-morpheus-text font-display">Chat (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/student/sessions" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["student"]}>
+          <div className="p-8 text-morpheus-text font-display">Sessions (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/tutor/chat" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}>
+          <div className="p-8 text-morpheus-text font-display">Chat (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/tutor/sessions" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}>
+          <div className="p-8 text-morpheus-text font-display">Sessions (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
+      <Route path="/admin/dashboard" element={
+        <ProtectedRoute><RoleRoute allowedRoles={["admin"]}>
+          <div className="p-8 text-morpheus-text font-display">Admin Dashboard (coming soon)</div>
+        </RoleRoute></ProtectedRoute>
+      } />
 
-        {/* ── Fallbacks ───────────────────────────────────────────────── */
-   /*     <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+      {/* ── Fallbacks ───────────────────────────────────────────────── */
+/*     <Route path="/" element={<Navigate to="/login" replace />} />
+     <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
+     <Route path="*" element={<Navigate to="/login" replace />} />
+   </Routes>
+ </BrowserRouter>
+);
 }*/
 
 
@@ -551,73 +551,73 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         {/* Auth */
-      /*  <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/*  <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
+  <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+  <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* Onboarding */
-      /*  <Route path="/student/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
+  {/* Onboarding */
+/*  <Route path="/student/onboarding" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/onboarding" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
+  } />
 
-      /*  {/* Student */
-    /*    <Route path="/student/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/discovery" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/tutors/:tutorId" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/connections" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+/*  {/* Student */
+/*    <Route path="/student/dashboard" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
+    } />
+    <Route path="/student/discovery" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
+    } />
+    <Route path="/student/tutors/:tutorId" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
+    } />
+    <Route path="/student/connections" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
+    } />
+    <Route path="/student/chat" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
+    } />
+    <Route path="/student/sessions" element={
+      <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+    } />
 
-      /*  {/* Tutor */
-      /*  <Route path="/tutor/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/requests" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/students" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+  /*  {/* Tutor */
+/*  <Route path="/tutor/dashboard" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/requests" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/students" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/chat" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/sessions" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+  } />
 
-     /*   {/* Admin */
-       /* <Route path="/admin/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/admin/tutors" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/admin/students" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminStudentsPage /></RoleRoute></ProtectedRoute>
-        } />
+/*   {/* Admin */
+/* <Route path="/admin/dashboard" element={
+   <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
+ } />
+ <Route path="/admin/tutors" element={
+   <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
+ } />
+ <Route path="/admin/students" element={
+   <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminStudentsPage /></RoleRoute></ProtectedRoute>
+ } />
 
-     /*   {/* Fallbacks */
-      /*  <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+/*   {/* Fallbacks */
+/*  <Route path="/" element={<Navigate to="/login" replace />} />
+  <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
+  <Route path="*" element={<Navigate to="/login" replace />} />
+</Routes>
+</BrowserRouter>
+);
 }*/
 
 
@@ -694,70 +694,70 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         {/* Auth */
-      /*  <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/*  <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
+  <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+  <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* Onboarding */
-       /* <Route path="/student/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
-      /*  <Route path="/tutor/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
+  {/* Onboarding */
+/* <Route path="/student/onboarding" element={
+   <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
+ } />
+/*  <Route path="/tutor/onboarding" element={
+   <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
+ } />
 
-        {/* Student */
-      /*  <Route path="/student/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/discovery" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/tutors/:tutorId" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/connections" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+ {/* Student */
+/*  <Route path="/student/dashboard" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/student/discovery" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/student/tutors/:tutorId" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/student/connections" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/student/chat" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/student/sessions" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+  } />
 
-      /*  {/* Tutor */
-      /*  <Route path="/tutor/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/requests" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/students" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+/*  {/* Tutor */
+/*  <Route path="/tutor/dashboard" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/requests" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/students" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/chat" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Messages" /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/tutor/sessions" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+  } />
 
-        {/* Admin */
-      /*  <Route path="/admin/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/admin/tutors" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
-        } />
+  {/* Admin */
+/*  <Route path="/admin/dashboard" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
+  } />
+  <Route path="/admin/tutors" element={
+    <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
+  } />
 
-     /*   {/* Fallbacks */
-      /*  <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+/*   {/* Fallbacks */
+/*  <Route path="/" element={<Navigate to="/login" replace />} />
+  <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
+  <Route path="*" element={<Navigate to="/login" replace />} />
+</Routes>
+</BrowserRouter>
+);
 }*/
 
 
@@ -830,70 +830,70 @@ export default function AppRouter() {
     <BrowserRouter>
       <Routes>
         {/* Auth */
- /*       <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
-        <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
-        <Route path="/verify-email" element={<VerifyOtpPage />} />
+/*       <Route path="/signup" element={<PublicRoute><SignupPage /></PublicRoute>} />
+       <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+       <Route path="/verify-email" element={<VerifyOtpPage />} />
 
-        {/* Onboarding */
- /*       <Route path="/student/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/onboarding" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
-        } />
+       {/* Onboarding */
+/*       <Route path="/student/onboarding" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentOnboardingPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/tutor/onboarding" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorOnboardingPage /></RoleRoute></ProtectedRoute>
+       } />
 
-        {/* Student */
-   /*     <Route path="/student/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/discovery" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/tutors/:tutorId" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentChatPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/connections" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/student/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+       {/* Student */
+/*     <Route path="/student/dashboard" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentDashboardPage /></RoleRoute></ProtectedRoute>
+     } />
+     <Route path="/student/discovery" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><DiscoveryPage /></RoleRoute></ProtectedRoute>
+     } />
+     <Route path="/student/tutors/:tutorId" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><TutorProfilePage /></RoleRoute></ProtectedRoute>
+     } />
+     <Route path="/student/chat" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentChatPage /></RoleRoute></ProtectedRoute>
+     } />
+     <Route path="/student/connections" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Connections" /></RoleRoute></ProtectedRoute>
+     } />
+     <Route path="/student/sessions" element={
+       <ProtectedRoute><RoleRoute allowedRoles={["student"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+     } />
 
-        {/* Tutor */
- /*       <Route path="/tutor/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/requests" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/students" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/chat" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorChatPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/tutor/sessions" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
-        } />
+     {/* Tutor */
+/*       <Route path="/tutor/dashboard" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorDashboardPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/tutor/requests" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><ConnectionRequestsPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/tutor/students" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><MyStudentsPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/tutor/chat" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorChatPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/tutor/sessions" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><Placeholder label="Sessions" /></RoleRoute></ProtectedRoute>
+       } />
 
-        {/* Admin */
- /*       <Route path="/admin/dashboard" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
-        } />
-        <Route path="/admin/tutors" element={
-          <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
-        } />
+       {/* Admin */
+/*       <Route path="/admin/dashboard" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><AdminDashboardPage /></RoleRoute></ProtectedRoute>
+       } />
+       <Route path="/admin/tutors" element={
+         <ProtectedRoute><RoleRoute allowedRoles={["admin"]}><TutorManagementPage /></RoleRoute></ProtectedRoute>
+       } />
 
-        {/* Fallbacks */
- /*       <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
-  );
+       {/* Fallbacks */
+/*       <Route path="/" element={<Navigate to="/login" replace />} />
+       <Route path="/unauthorized" element={<div className="p-8 text-red-400">Access Denied</div>} />
+       <Route path="*" element={<Navigate to="/login" replace />} />
+     </Routes>
+   </BrowserRouter>
+ );
 }*/
 
 
@@ -926,6 +926,11 @@ import DiscoveryPage from "../pages/student/DiscoveryPage";
 import TutorProfilePage from "../pages/student/TutorProfilePage";
 import StudentChatPage from "../pages/student/StudentChatPage";
 import StudentSessionsPage from "../pages/student/StudentSessionsPage";  //    ../pages/student/StudentSessionsPage
+import WeaknessPredictionPage from "../pages/student/WeaknessPredictionPage";
+import LearningVelocityPage from "../pages/student/LearningVelocityPage";
+import ConceptStabilityPage from "../pages/student/ConceptStabilityPage";
+import RevisionSessionPage from "../pages/student/RevisionSessionPage";
+import FlashcardsPage from "../pages/student/FlashcardsPage";
 
 // Tutor
 import TutorDashboardPage from "../pages/tutor/TutorDashboardPage";
@@ -1008,6 +1013,21 @@ export default function AppRouter() {
         } />
         <Route path="/student/sessions" element={
           <ProtectedRoute><RoleRoute allowedRoles={["student"]}><StudentSessionsPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/weakness-prediction" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><WeaknessPredictionPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/learning-velocity" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><LearningVelocityPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/concept-stability" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><ConceptStabilityPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/revision/:topicSlug" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><RevisionSessionPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/flashcards/:topicSlug" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><FlashcardsPage /></RoleRoute></ProtectedRoute>
         } />
 
         {/* Tutor */}

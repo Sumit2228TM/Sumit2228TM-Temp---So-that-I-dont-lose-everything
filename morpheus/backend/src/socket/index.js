@@ -369,6 +369,22 @@ export function setupSocket(server) {
                     role: socket.user.role,
                 });
 
+                // Also notify the newly-joined peer if someone is already in the room.
+                // This is required so the designated offerer can start WebRTC when joining second.
+                const roomSockets = await io.in(callRoom).fetchSockets();
+                const peers = roomSockets
+                    .filter((s) => s.id !== socket.id)
+                    .map((s) => ({
+                        userId: s.user?.id,
+                        role: s.user?.role,
+                    }));
+
+                socket.emit('call_room_state', {
+                    sessionId,
+                    peerCount: peers.length,
+                    peers,
+                });
+
                 console.log(`User ${socket.user.id} (${socket.user.role}) joined call room: ${callRoom}`);
             } catch (error) {
                 console.error('Error joining call:', error);

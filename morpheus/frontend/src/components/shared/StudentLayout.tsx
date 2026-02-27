@@ -6,11 +6,12 @@ import {
   Users,
   MessageSquare,
   Video,
-  Star,
   LogOut,
   Menu,
   X,
-  GraduationCap,
+  Brain,
+  TrendingUp,
+  Activity,
 } from "lucide-react";
 import { useAuthStore } from "../../store/auth.store";  //  ../store/auth.store
 import { authApi } from "../../../src/api/auth.api";  //  ../api/auth.api
@@ -22,6 +23,12 @@ const navItems = [
   { to: "/student/connections", icon: Users, label: "Connections" },
   { to: "/student/chat", icon: MessageSquare, label: "Messages" },
   { to: "/student/sessions", icon: Video, label: "Sessions" },
+];
+
+const aiNavItems = [
+  { to: "/student/weakness-prediction", icon: Brain, label: "Weakness Predictor" },
+  { to: "/student/learning-velocity", icon: TrendingUp, label: "Learning Velocity" },
+  { to: "/student/concept-stability", icon: Activity, label: "Concept Stability" },
 ];
 
 function NavItem({
@@ -62,7 +69,7 @@ export default function StudentLayout({ children }: { children: ReactNode }) {
   const handleLogout = async () => {
     try {
       await authApi.logout();
-    } catch {}
+    } catch { }
     clearAuth();
     navigate("/login");
   };
@@ -92,14 +99,29 @@ export default function StudentLayout({ children }: { children: ReactNode }) {
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
-        {navItems.map((item) => (
-          <NavItem
-            key={item.to}
-            {...item}
-            onClick={() => setMobileOpen(false)}
-          />
-        ))}
+      <nav className="flex-1 px-3 py-4 overflow-y-auto">
+        <div className="space-y-1">
+          {navItems.map((item) => (
+            <NavItem
+              key={item.to}
+              {...item}
+              onClick={() => setMobileOpen(false)}
+            />
+          ))}
+        </div>
+        {/* AI Features */}
+        <div className="mt-4 pt-4 border-t border-morpheus-border">
+          <p className="px-3 mb-2 text-[10px] font-semibold uppercase tracking-widest text-morpheus-muted">AI Insights</p>
+          <div className="space-y-1">
+            {aiNavItems.map((item) => (
+              <NavItem
+                key={item.to}
+                {...item}
+                onClick={() => setMobileOpen(false)}
+              />
+            ))}
+          </div>
+        </div>
       </nav>
 
       {/* User + logout */}

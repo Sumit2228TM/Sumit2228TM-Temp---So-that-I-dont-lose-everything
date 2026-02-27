@@ -931,6 +931,8 @@ import LearningVelocityPage from "../pages/student/LearningVelocityPage";
 import ConceptStabilityPage from "../pages/student/ConceptStabilityPage";
 import RevisionSessionPage from "../pages/student/RevisionSessionPage";
 import FlashcardsPage from "../pages/student/FlashcardsPage";
+import SolverProfilePage from "../pages/student/SolverProfilePage";
+import ConceptTransferPage from "../pages/student/ConceptTransferPage";
 
 // Tutor
 import TutorDashboardPage from "../pages/tutor/TutorDashboardPage";
@@ -1028,6 +1030,12 @@ export default function AppRouter() {
         } />
         <Route path="/student/flashcards/:topicSlug" element={
           <ProtectedRoute><RoleRoute allowedRoles={["student"]}><FlashcardsPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/solver-profile" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><SolverProfilePage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/concept-transfer" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><ConceptTransferPage /></RoleRoute></ProtectedRoute>
         } />
 
         {/* Tutor */}

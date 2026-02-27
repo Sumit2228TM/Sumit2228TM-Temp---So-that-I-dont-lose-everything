@@ -12,6 +12,8 @@ import {
   Brain,
   TrendingUp,
   Activity,
+  Cpu,
+  Globe,
 } from "lucide-react";
 import { useAuthStore } from "../../store/auth.store";  //  ../store/auth.store
 import { authApi } from "../../../src/api/auth.api";  //  ../api/auth.api
@@ -29,6 +31,8 @@ const aiNavItems = [
   { to: "/student/weakness-prediction", icon: Brain, label: "Weakness Predictor" },
   { to: "/student/learning-velocity", icon: TrendingUp, label: "Learning Velocity" },
   { to: "/student/concept-stability", icon: Activity, label: "Concept Stability" },
+  { to: "/student/solver-profile", icon: Cpu, label: "Solver Profile" },
+  { to: "/student/concept-transfer", icon: Globe, label: "Transfer Score" },
 ];
 
 function NavItem({

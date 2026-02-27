@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import StudentLayout from "../../components/shared/StudentLayout";
+import { useLearningStore } from "../../store/learning.store";
 import {
     ArrowLeft,
     BookOpen,

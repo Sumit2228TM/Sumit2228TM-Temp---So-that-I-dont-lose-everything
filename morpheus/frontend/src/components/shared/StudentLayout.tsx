@@ -14,6 +14,7 @@ import {
   Activity,
   Cpu,
   Globe,
+  Radio,
 } from "lucide-react";
 import { useAuthStore } from "../../store/auth.store";  //  ../store/auth.store
 import { authApi } from "../../../src/api/auth.api";  //  ../api/auth.api
@@ -33,6 +34,7 @@ const aiNavItems = [
   { to: "/student/concept-stability", icon: Activity, label: "Concept Stability" },
   { to: "/student/solver-profile", icon: Cpu, label: "Solver Profile" },
   { to: "/student/concept-transfer", icon: Globe, label: "Transfer Score" },
+  { to: "/student/live-users", icon: Radio, label: "Live Platform" },
 ];
 
 function NavItem({

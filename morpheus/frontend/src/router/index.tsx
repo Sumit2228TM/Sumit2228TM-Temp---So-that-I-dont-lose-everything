@@ -933,6 +933,7 @@ import RevisionSessionPage from "../pages/student/RevisionSessionPage";
 import FlashcardsPage from "../pages/student/FlashcardsPage";
 import SolverProfilePage from "../pages/student/SolverProfilePage";
 import ConceptTransferPage from "../pages/student/ConceptTransferPage";
+import LiveUsersPage from "../pages/student/LiveUsersPage";
 
 // Tutor
 import TutorDashboardPage from "../pages/tutor/TutorDashboardPage";
@@ -1036,6 +1037,9 @@ export default function AppRouter() {
         } />
         <Route path="/student/concept-transfer" element={
           <ProtectedRoute><RoleRoute allowedRoles={["student"]}><ConceptTransferPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/live-users" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><LiveUsersPage /></RoleRoute></ProtectedRoute>
         } />
 
         {/* Tutor */}

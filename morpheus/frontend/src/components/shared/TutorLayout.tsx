@@ -10,6 +10,7 @@ import {
   Menu,
   X,
   Clock,
+  BookOpen,
 } from "lucide-react";
 import { useAuthStore } from "../../store/auth.store";//  ../store/auth.store
 import { authApi } from "../../api/auth.api"; // ../api/auth.api
@@ -21,6 +22,7 @@ const navItems = [
   { to: "/tutor/students", icon: Users, label: "My Students" },
   { to: "/tutor/chat", icon: MessageSquare, label: "Messages" },
   { to: "/tutor/sessions", icon: Video, label: "Sessions" },
+  { to: "/tutor/doubts", icon: BookOpen, label: "Live Doubts ✨" },
 ];
 
 function NavItem({
@@ -72,7 +74,7 @@ export default function TutorLayout({ children, pendingCount }: TutorLayoutProps
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = async () => {
-    try { await authApi.logout(); } catch {}
+    try { await authApi.logout(); } catch { }
     clearAuth();
     navigate("/login");
   };
@@ -91,8 +93,8 @@ export default function TutorLayout({ children, pendingCount }: TutorLayoutProps
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-morpheus-accent flex items-center justify-center shrink-0">
             <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
-              <path d="M11 2L19.5 7V15L11 20L2.5 15V7L11 2Z" stroke="white" strokeWidth="1.5" fill="none"/>
-              <circle cx="11" cy="11" r="2" fill="white"/>
+              <path d="M11 2L19.5 7V15L11 20L2.5 15V7L11 2Z" stroke="white" strokeWidth="1.5" fill="none" />
+              <circle cx="11" cy="11" r="2" fill="white" />
             </svg>
           </div>
           <span className="font-display text-lg font-semibold text-morpheus-text">Morpheus</span>

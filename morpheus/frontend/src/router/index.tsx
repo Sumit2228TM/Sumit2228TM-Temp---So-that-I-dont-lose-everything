@@ -934,6 +934,10 @@ import FlashcardsPage from "../pages/student/FlashcardsPage";
 import SolverProfilePage from "../pages/student/SolverProfilePage";
 import ConceptTransferPage from "../pages/student/ConceptTransferPage";
 import LiveUsersPage from "../pages/student/LiveUsersPage";
+import PostDoubtPage from "../pages/student/PostDoubtPage";
+import ShadowLobbyPage from "../pages/student/ShadowLobbyPage";
+import DoubtFeedPage from "../pages/tutor/DoubtFeedPage";
+import ShadowSessionPage from "../pages/shadow/ShadowSessionPage";
 
 // Tutor
 import TutorDashboardPage from "../pages/tutor/TutorDashboardPage";
@@ -1041,6 +1045,12 @@ export default function AppRouter() {
         <Route path="/student/live-users" element={
           <ProtectedRoute><RoleRoute allowedRoles={["student"]}><LiveUsersPage /></RoleRoute></ProtectedRoute>
         } />
+        <Route path="/student/shadow/post" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><PostDoubtPage /></RoleRoute></ProtectedRoute>
+        } />
+        <Route path="/student/shadow/lobby" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["student"]}><ShadowLobbyPage /></RoleRoute></ProtectedRoute>
+        } />
 
         {/* Tutor */}
         <Route path="/tutor/dashboard" element={
@@ -1058,6 +1068,9 @@ export default function AppRouter() {
         <Route path="/tutor/sessions" element={
           <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><TutorSessionsPage /></RoleRoute></ProtectedRoute>
         } />
+        <Route path="/tutor/doubts" element={
+          <ProtectedRoute><RoleRoute allowedRoles={["tutor"]}><DoubtFeedPage /></RoleRoute></ProtectedRoute>
+        } />
 
         {/* Admin */}
         <Route path="/admin/dashboard" element={
@@ -1070,6 +1083,11 @@ export default function AppRouter() {
         {/* Video call — accessible by both student and tutor */}
         <Route path="/call/:sessionId" element={
           <ProtectedRoute><VideoCallPage /></ProtectedRoute>
+        } />
+
+        {/* Shadow Session — accessible to students AND tutors */}
+        <Route path="/shadow/session/:doubtId" element={
+          <ProtectedRoute><ShadowSessionPage /></ProtectedRoute>
         } />
 
         {/* Fallbacks */}

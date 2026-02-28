@@ -15,6 +15,8 @@ import {
   Cpu,
   Globe,
   Radio,
+  Zap,
+  Eye,
 } from "lucide-react";
 import { useAuthStore } from "../../store/auth.store";  //  ../store/auth.store
 import { authApi } from "../../../src/api/auth.api";  //  ../api/auth.api
@@ -35,6 +37,11 @@ const aiNavItems = [
   { to: "/student/solver-profile", icon: Cpu, label: "Solver Profile" },
   { to: "/student/concept-transfer", icon: Globe, label: "Transfer Score" },
   { to: "/student/live-users", icon: Radio, label: "Live Platform" },
+];
+
+const shadowNavItems = [
+  { to: "/student/shadow/post", icon: Zap, label: "Post a Doubt" },
+  { to: "/student/shadow/lobby", icon: Eye, label: "Shadow Lobby" },
 ];
 
 function NavItem({
@@ -120,6 +127,19 @@ export default function StudentLayout({ children }: { children: ReactNode }) {
           <p className="px-3 mb-2 text-[10px] font-semibold uppercase tracking-widest text-morpheus-muted">AI Insights</p>
           <div className="space-y-1">
             {aiNavItems.map((item) => (
+              <NavItem
+                key={item.to}
+                {...item}
+                onClick={() => setMobileOpen(false)}
+              />
+            ))}
+          </div>
+        </div>
+        {/* Shadow Learning */}
+        <div className="mt-4 pt-4 border-t border-morpheus-border">
+          <p className="px-3 mb-2 text-[10px] font-semibold uppercase tracking-widest text-morpheus-muted">Shadow Learning</p>
+          <div className="space-y-1">
+            {shadowNavItems.map((item) => (
               <NavItem
                 key={item.to}
                 {...item}
